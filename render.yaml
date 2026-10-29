@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: iraqi-university-guide
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PREVIEW_MODE
+        value: "false"
+      - key: DATA_DIR
+        value: /data
+      - key: REQUIRED_CHANNEL
+        value: "@iwillsleep"
+      # Never put real secrets in Git. Render prompts for these on Blueprint creation.
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
