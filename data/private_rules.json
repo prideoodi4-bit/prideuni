@@ -1,0 +1,1475 @@
+{
+  "academic_year_as_printed": "2026-2027",
+  "sector": "private",
+  "threshold_type": "minimum_application_not_guaranteed_admission",
+  "source_library_file_id": "libfile_81907786a0008191bec768e76238d2f0",
+  "start_pdf_page": 3,
+  "notes": [
+    "First two PDF pages excluded as requested. Continuation of previous table at top of PDF page 3 (rows 32-37) excluded from private rules because its heading is outside scope.",
+    "Shared group source repeats row numbers 61 and 62 across pages 8 and 9; all distinct rows retained with unique IDs.",
+    "No university-specific offering or fees provided. Do not infer that every university offers each program.",
+    "Arabic source text retained, including PDF encoding spelling artifacts; display names require editorial normalization.",
+    "Source authenticity not externally verified."
+  ],
+  "groups": {
+    "scientific_biological": [
+      "علمي",
+      "احيائي"
+    ],
+    "scientific_applied": [
+      "علمي",
+      "تطبيقي"
+    ],
+    "shared_scientific": [
+      "احيائي",
+      "تطبيقي",
+      "علمي"
+    ],
+    "literary": [
+      "ادبي"
+    ],
+    "arts": [
+      "فنون"
+    ]
+  },
+  "vocational_rule": {
+    "source_pdf_page": 11,
+    "additional_points_morning": 2,
+    "additional_points_evening": 2,
+    "reference_group": "shared_scientific",
+    "restriction": "Corresponding specializations only, according to admission pathway. Requires mapping of vocational branches to eligible programs; do not apply to all programs automatically.",
+    "remaining_branches": "Subject to competition according to the approved minimum for each specialization."
+  },
+  "records": [
+    {
+      "id": "private-001",
+      "group": "scientific_biological",
+      "source_row": 1,
+      "program_source": "الطب العام",
+      "minimum_application_morning": 95,
+      "minimum_application_evening": null,
+      "evening_status": "blank_in_source",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-002",
+      "group": "scientific_biological",
+      "source_row": 2,
+      "program_source": "طب االسنان",
+      "minimum_application_morning": 90,
+      "minimum_application_evening": null,
+      "evening_status": "blank_in_source",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-003",
+      "group": "scientific_biological",
+      "source_row": 3,
+      "program_source": "الصيدلة",
+      "minimum_application_morning": 90,
+      "minimum_application_evening": null,
+      "evening_status": "blank_in_source",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-004",
+      "group": "scientific_biological",
+      "source_row": 4,
+      "program_source": "كلية التمريض",
+      "minimum_application_morning": 78,
+      "minimum_application_evening": 75,
+      "evening_status": "specified",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-005",
+      "group": "scientific_biological",
+      "source_row": 5,
+      "program_source": "تقنيات املختربات الطبية",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-006",
+      "group": "scientific_biological",
+      "source_row": 6,
+      "program_source": "تقنيات االشعة / تقنيات االشعة والطب النووي",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-007",
+      "group": "scientific_biological",
+      "source_row": 7,
+      "program_source": "تقنيات صناعة االسنان",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-008",
+      "group": "scientific_biological",
+      "source_row": 8,
+      "program_source": "تقنيات العالج الطبيعي / تقنيات التعهيل الطيب والعالج الطبيعي",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-009",
+      "group": "scientific_biological",
+      "source_row": 9,
+      "program_source": "تقنيات التخدير",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-010",
+      "group": "scientific_biological",
+      "source_row": 10,
+      "program_source": "تقنيات التعهيل الطيب",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 3
+    },
+    {
+      "id": "private-011",
+      "group": "scientific_biological",
+      "source_row": 11,
+      "program_source": "تقنيات صحة اجملتمع",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-012",
+      "group": "scientific_biological",
+      "source_row": 12,
+      "program_source": "تقنيات الكلية الصناعية",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-013",
+      "group": "scientific_biological",
+      "source_row": 13,
+      "program_source": "تقنيات التغذية العالجية",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-014",
+      "group": "scientific_biological",
+      "source_row": 14,
+      "program_source": "النطق",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-015",
+      "group": "scientific_biological",
+      "source_row": 15,
+      "program_source": "العالج الوظيفي",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-016",
+      "group": "scientific_biological",
+      "source_row": 16,
+      "program_source": "تقنيات البصرايت / تقنيات فحص البصر",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-017",
+      "group": "scientific_biological",
+      "source_row": 17,
+      "program_source": "تقنيات التجميل ابلليزر",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-018",
+      "group": "scientific_biological",
+      "source_row": 18,
+      "program_source": "تقنيات عنايـــة القلــب",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-019",
+      "group": "scientific_biological",
+      "source_row": 19,
+      "program_source": "تقنيات طــب الطوارئ",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-020",
+      "group": "scientific_biological",
+      "source_row": 20,
+      "program_source": "تقنيات العقم واالجناب",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-021",
+      "group": "scientific_biological",
+      "source_row": 21,
+      "program_source": "معهــد / تقنيــات الصيدلــة",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 68,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-022",
+      "group": "scientific_biological",
+      "source_row": 22,
+      "program_source": "معهــد / تقنيــات فحــص البصــر",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 68,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-023",
+      "group": "scientific_biological",
+      "source_row": 23,
+      "program_source": "معهــد / تقنيــات صناعــة االسنــان",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 68,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-024",
+      "group": "scientific_biological",
+      "source_row": 24,
+      "program_source": "معهــد / تقنيــات االشعــة",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 68,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-025",
+      "group": "scientific_biological",
+      "source_row": 25,
+      "program_source": "معهــد / تقنيــات التخديـر",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 68,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-026",
+      "group": "scientific_biological",
+      "source_row": 26,
+      "program_source": "معهد / تقنيات التمريض",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 68,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-027",
+      "group": "scientific_biological",
+      "source_row": 27,
+      "program_source": "معهد / تقنيات االدارة الصحية",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 68,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-028",
+      "group": "scientific_biological",
+      "source_row": 28,
+      "program_source": "معهد / تقنيات طب الطوارئ واالسعافات االولية",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 68,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-029",
+      "group": "scientific_biological",
+      "source_row": 29,
+      "program_source": "معهد / تقنيات التجميل والليزر",
+      "minimum_application_morning": 70,
+      "minimum_application_evening": 68,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-030",
+      "group": "scientific_applied",
+      "source_row": 1,
+      "program_source": "هندسة النفط / هندسة البرتول /هندسة النفط والغاز",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-031",
+      "group": "scientific_applied",
+      "source_row": 2,
+      "program_source": "هندسة معماري / هندسة العمارة",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 4
+    },
+    {
+      "id": "private-032",
+      "group": "scientific_applied",
+      "source_row": 3,
+      "program_source": "اهلندسة املدنية",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-033",
+      "group": "scientific_applied",
+      "source_row": 4,
+      "program_source": "هندسة امليكانيك",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-034",
+      "group": "scientific_applied",
+      "source_row": 5,
+      "program_source": "هندسة البناء واالنشاءات",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-035",
+      "group": "scientific_applied",
+      "source_row": 6,
+      "program_source": "هندسة الكهرابء",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-036",
+      "group": "scientific_applied",
+      "source_row": 7,
+      "program_source": "هندسة البناء وادارة املشاريع",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-037",
+      "group": "scientific_applied",
+      "source_row": 8,
+      "program_source": "هندسة الطرق واجلسور",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-038",
+      "group": "scientific_applied",
+      "source_row": 9,
+      "program_source": "هندسة املساحة",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-039",
+      "group": "scientific_applied",
+      "source_row": 10,
+      "program_source": "هندسة تقنيات البناء واالنشاءات",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-040",
+      "group": "scientific_applied",
+      "source_row": 11,
+      "program_source": "تقنيات اهلندسة الكهرابئية",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-041",
+      "group": "scientific_applied",
+      "source_row": 12,
+      "program_source": "هندسة تقنيات البيئة والتلوث",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-042",
+      "group": "scientific_applied",
+      "source_row": 13,
+      "program_source": "هندسة التقنيات/النفطية وحفر االابر هندسة تقنيات االستكشافات النفطية وحفر االابر",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-043",
+      "group": "scientific_applied",
+      "source_row": 14,
+      "program_source": "هندسة تقنيات النفط والغاز",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-044",
+      "group": "scientific_applied",
+      "source_row": 15,
+      "program_source": "أنظمة تقنيات املعلومات",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-045",
+      "group": "shared_scientific",
+      "source_row": 1,
+      "program_source": "هندسة الطب احليايت",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-046",
+      "group": "shared_scientific",
+      "source_row": 2,
+      "program_source": "اهلندسة الكيمياوية والصناعات النفطية",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-047",
+      "group": "shared_scientific",
+      "source_row": 3,
+      "program_source": "هندسة تكرير النفط والغاز",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-048",
+      "group": "shared_scientific",
+      "source_row": 4,
+      "program_source": "هندسة الطائرات",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-049",
+      "group": "shared_scientific",
+      "source_row": 5,
+      "program_source": "هندســـــة الطائرات املســـــرية / هندســـــة نظم الطائرات املســـــرية / هندســـــة نظم الطائرات .بدون طيار",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 5
+    },
+    {
+      "id": "private-050",
+      "group": "shared_scientific",
+      "source_row": 6,
+      "program_source": "هندســــة االتصــــاالت/ هندســــة اتصــــاالت احلاســـوب/ هندســـة االتصـــاالت واحلوســـبة املتنقلة",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-051",
+      "group": "shared_scientific",
+      "source_row": 7,
+      "program_source": "هندسة الليزر وااللكرتونيات البصرية",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-052",
+      "group": "shared_scientific",
+      "source_row": 8,
+      "program_source": "هندسة احلاسوب",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-053",
+      "group": "shared_scientific",
+      "source_row": 9,
+      "program_source": "هندسـة الذكاء االصـطناعي /هندسـة احلاسـبات والـذكـاء االصـــــطنـاعي/ هنـدســــــة الـذكـاء االصطناعي واالنسان االيل",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-054",
+      "group": "shared_scientific",
+      "source_row": 10,
+      "program_source": "هندسة سيطرة وحاسبات",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-055",
+      "group": "shared_scientific",
+      "source_row": 11,
+      "program_source": "هندسة السيطرة والنظم",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-056",
+      "group": "shared_scientific",
+      "source_row": 12,
+      "program_source": "هندسة أمن املعلومات",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-057",
+      "group": "shared_scientific",
+      "source_row": 13,
+      "program_source": "هندسة االمن السيرباين",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-058",
+      "group": "shared_scientific",
+      "source_row": 14,
+      "program_source": "هندسة الكرتونية واتصاالت",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-059",
+      "group": "shared_scientific",
+      "source_row": 15,
+      "program_source": "هندسة املعلومات واالتصاالت",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-060",
+      "group": "shared_scientific",
+      "source_row": 16,
+      "program_source": "هندسة تكنولوجيا االعالم واالتصاالت",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-061",
+      "group": "shared_scientific",
+      "source_row": 17,
+      "program_source": "هندسة الطاقة / هندسة الطاقة املتجددة",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-062",
+      "group": "shared_scientific",
+      "source_row": 18,
+      "program_source": "هندسة االطراف واملساند الصناعية",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-063",
+      "group": "shared_scientific",
+      "source_row": 19,
+      "program_source": "هندسة االجهزة الطبية",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-064",
+      "group": "shared_scientific",
+      "source_row": 20,
+      "program_source": "ادارة اهلندسة",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-065",
+      "group": "shared_scientific",
+      "source_row": 21,
+      "program_source": "هندسة التصميم الرقمي",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 62,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-066",
+      "group": "shared_scientific",
+      "source_row": 22,
+      "program_source": "هندسة تقنيات احلاسوب",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-067",
+      "group": "shared_scientific",
+      "source_row": 23,
+      "program_source": "هندسة تقنيات االجهزة الطبية",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-068",
+      "group": "shared_scientific",
+      "source_row": 24,
+      "program_source": "هندسة تقنيات الطاقة املتجددة",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-069",
+      "group": "shared_scientific",
+      "source_row": 25,
+      "program_source": "هنــدســـــــة تقنيــات الفيزايء الطبيــة والعالج االشـــعاعي/ هندســـة تقنيات الفيزايء الصـــحية والعالج الطبيعي",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-070",
+      "group": "shared_scientific",
+      "source_row": 26,
+      "program_source": "هندسة تقنيات التربيد والتكييف",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 6
+    },
+    {
+      "id": "private-071",
+      "group": "shared_scientific",
+      "source_row": 27,
+      "program_source": "هندسة تقنيات الطريان",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-072",
+      "group": "shared_scientific",
+      "source_row": 28,
+      "program_source": "هندسة تقنيات االتصاالت",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-073",
+      "group": "shared_scientific",
+      "source_row": 29,
+      "program_source": "هندسة تقنيات الوقود والطاقة",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-074",
+      "group": "shared_scientific",
+      "source_row": 30,
+      "program_source": "هندســــة تقنيات االمن الســــيرباين / هندســــة تقنيات االمن السيرباين واحلوسبة السحابية",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-075",
+      "group": "shared_scientific",
+      "source_row": 31,
+      "program_source": "هندسة تقنيات السيارات",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-076",
+      "group": "shared_scientific",
+      "source_row": 32,
+      "program_source": "هندسة تقنيات امليكاترونكس",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-077",
+      "group": "shared_scientific",
+      "source_row": 33,
+      "program_source": "هندسة تقنيات الليزر وااللكرتونيات البصرية",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-078",
+      "group": "shared_scientific",
+      "source_row": 34,
+      "program_source": "هندسة تقنيات ميكانيك القوى",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-079",
+      "group": "shared_scientific",
+      "source_row": 35,
+      "program_source": "هندسـة تقنيات الذكاء االصـطناعي / هندسـة تقنيات الروبواتت والذكاء االصطناعي",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-080",
+      "group": "shared_scientific",
+      "source_row": 36,
+      "program_source": "هندسة تقنيات الطائرات والطائرات املسرية",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-081",
+      "group": "shared_scientific",
+      "source_row": 37,
+      "program_source": "هندسة تقنيات الزراعة الذكية واالنظمة البيئية",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-082",
+      "group": "shared_scientific",
+      "source_row": 38,
+      "program_source": "هنـدســــــة تقنيـات الصـــــحـة الـذكيـة واالنظمـة /الطبية تقنيات الصحة الرقمية الذكية",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-083",
+      "group": "shared_scientific",
+      "source_row": 39,
+      "program_source": "هندسة تقنيات املساحة",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-084",
+      "group": "shared_scientific",
+      "source_row": 40,
+      "program_source": "علوم االدلة اجلنائية",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-085",
+      "group": "shared_scientific",
+      "source_row": 41,
+      "program_source": "علم احلاسوب ونظم املعلومات",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-086",
+      "group": "shared_scientific",
+      "source_row": 42,
+      "program_source": "علوم الفيزايء الطبية",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-087",
+      "group": "shared_scientific",
+      "source_row": 43,
+      "program_source": "علوم التحليالت املرضية",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-088",
+      "group": "shared_scientific",
+      "source_row": 44,
+      "program_source": "علوم االمن السـيرباين / علوم االمن السـيرباين / واحلوسبة السحابية علوم أمنية احلاسوب واالمن السيرباين",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-089",
+      "group": "shared_scientific",
+      "source_row": 45,
+      "program_source": "علوم احلاسـوب / علوم احلاسـبات وتكنولوجيا املعلومات",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-090",
+      "group": "shared_scientific",
+      "source_row": 46,
+      "program_source": "علــوم احليـــاة",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-091",
+      "group": "shared_scientific",
+      "source_row": 47,
+      "program_source": "علوم الكيمياء احلياتية",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 7
+    },
+    {
+      "id": "private-092",
+      "group": "shared_scientific",
+      "source_row": 48,
+      "program_source": "علوم االنظمة الطبية الذكية",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-093",
+      "group": "shared_scientific",
+      "source_row": 49,
+      "program_source": "علوم الذكاء االصطناعي",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-094",
+      "group": "shared_scientific",
+      "source_row": 50,
+      "program_source": "علوم الطاقة املتجددة",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-095",
+      "group": "shared_scientific",
+      "source_row": 51,
+      "program_source": "علوم اجليوفيزايء",
+      "minimum_application_morning": 65,
+      "minimum_application_evening": 63,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-096",
+      "group": "shared_scientific",
+      "source_row": 52,
+      "program_source": "تقنيات النبااتت الطبية والنواتج الطبيعية",
+      "minimum_application_morning": 50,
+      "minimum_application_evening": 50,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-097",
+      "group": "shared_scientific",
+      "source_row": 53,
+      "program_source": "تقنيــات االنتــاج احليوانـــي",
+      "minimum_application_morning": 50,
+      "minimum_application_evening": 50,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-098",
+      "group": "shared_scientific",
+      "source_row": 54,
+      "program_source": "القانون",
+      "minimum_application_morning": 68,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-099",
+      "group": "shared_scientific",
+      "source_row": 55,
+      "program_source": "علوم التقنيات االحيائية الطبية",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-100",
+      "group": "shared_scientific",
+      "source_row": 56,
+      "program_source": "االحياء الطبية اجملهرية / علوم االحياء اجملهرية",
+      "minimum_application_morning": 63,
+      "minimum_application_evening": 60,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-101",
+      "group": "shared_scientific",
+      "source_row": 57,
+      "program_source": "تقنيات االنتاج النبايت",
+      "minimum_application_morning": 50,
+      "minimum_application_evening": 50,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-102",
+      "group": "shared_scientific",
+      "source_row": 58,
+      "program_source": "/االعالم / االعالم الرقمي / الصـــــحـــافـــة الـعـالقـــات الـعـــامـــة / االذاعـــة والـتـلـفـزيـون /االعالن واالتصال التسويقي الرقمي",
+      "minimum_application_morning": 54,
+      "minimum_application_evening": 52,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-103",
+      "group": "shared_scientific",
+      "source_row": 59,
+      "program_source": "العلوم/ السياسية / العلوم السياسية والدولية عالقات دولية ودبلوماسية",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-104",
+      "group": "shared_scientific",
+      "source_row": 60,
+      "program_source": "اقتصـــــــادايت التكنولوجيــا املــاليــة والتحول الرقمي",
+      "minimum_application_morning": 58,
+      "minimum_application_evening": 55,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-105",
+      "group": "shared_scientific",
+      "source_row": 61,
+      "program_source": "االدارة واالقتصـاد/ احملاسـبة/االدارة الصـناعية ادارة وتسويق النفط والغاز/ادارة االعمال ادارة التســويق/ادارة /املشــاريع/ادارة املخاطر /ادارة االســتثمار واالعمال/ الرقابة احملاســبية علوم مالية ومصـرفية / علوم حماسـبية ومصـرفية / /العلوم املالية واملصرفية االسالمية/االقتصاد اقتصــــــادايت النفط والغـاز/ اقتصــــــادايت التكنولوجيــا املــاليــة والتحول الرقمي/ علوم السياحة",
+      "minimum_application_morning": 58,
+      "minimum_application_evening": 55,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-106",
+      "group": "shared_scientific",
+      "source_row": 62,
+      "program_source": "تقنيات االدارة الصحية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 8
+    },
+    {
+      "id": "private-107",
+      "group": "shared_scientific",
+      "source_row": 61,
+      "program_source": "/تقنيـات احملـاســـــبـة / تقنيـات ادارة االعمـال تقنيات التسويق واملبيعات االلكرتونية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-108",
+      "group": "shared_scientific",
+      "source_row": 62,
+      "program_source": "،الرتبية رايضــيات، كيمياء، فيزايء، حاســبات /علوم احليـاة، جغرافيـة / اللغـة العربيـة/التـاريخ اجلغرافية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-109",
+      "group": "shared_scientific",
+      "source_row": 63,
+      "program_source": "،اآلداب (اللغة فرنسية)اللغة إنكليزية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-110",
+      "group": "shared_scientific",
+      "source_row": 64,
+      "program_source": ")اآلداب (اللغة العربية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-111",
+      "group": "shared_scientific",
+      "source_row": 65,
+      "program_source": "الرتبية الفنية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-112",
+      "group": "shared_scientific",
+      "source_row": 66,
+      "program_source": "علم النفس/ علم النفس السريري/ علم النفس اإلكلينيكي",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-113",
+      "group": "shared_scientific",
+      "source_row": 67,
+      "program_source": "الرتبية والتنمية البشرية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-114",
+      "group": "shared_scientific",
+      "source_row": 68,
+      "program_source": "الرتبية اخلاصة",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 55,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-115",
+      "group": "shared_scientific",
+      "source_row": 69,
+      "program_source": "رايض األطفال",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-116",
+      "group": "shared_scientific",
+      "source_row": 70,
+      "program_source": "معلم الصفوف األوىل",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-117",
+      "group": "shared_scientific",
+      "source_row": 71,
+      "program_source": "التعهيل السلوكي للتوحد",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-118",
+      "group": "shared_scientific",
+      "source_row": 72,
+      "program_source": "اجلغرافية ونظم املعلومات اجلغرافية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-119",
+      "group": "shared_scientific",
+      "source_row": 73,
+      "program_source": "الرتبيـــة البدنيـــة وعلـــوم الرايضـــة",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-120",
+      "group": "literary",
+      "source_row": 1,
+      "program_source": "القانــــون",
+      "minimum_application_morning": 68,
+      "minimum_application_evening": 65,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-121",
+      "group": "literary",
+      "source_row": 2,
+      "program_source": "/ االعالم / االعالم الرقمي / الصحافة /العالقات العامة/ االذاعة والتلفزيون االعالن واالتصال التسويقي الرقمي",
+      "minimum_application_morning": 54,
+      "minimum_application_evening": 52,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-122",
+      "group": "literary",
+      "source_row": 3,
+      "program_source": "اقتصادايت التكنولوجيا املالية والتحول الرقمي",
+      "minimum_application_morning": 58,
+      "minimum_application_evening": 55,
+      "evening_status": "specified",
+      "source_pdf_page": 9
+    },
+    {
+      "id": "private-123",
+      "group": "literary",
+      "source_row": 4,
+      "program_source": "العلوم السياسية /العلوم السياسية والدولية عالقات دولية ودبلوماسية",
+      "minimum_application_morning": 60,
+      "minimum_application_evening": 58,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-124",
+      "group": "literary",
+      "source_row": 5,
+      "program_source": "االدارة واالقتصـــــــاد/ احملــاســـــبــة/االدارة /الصناعية / ادارة وتسويق النفط والغاز ادارة التسويق/ادارة املشاريع/ادارة /املخاطر ادارة االستثمار واالعمال/ الرقابة احملاسبية/ علوم مالية ومصرفية / علوم حماسبية ومصرفية / العلوم املالية واملصرفية االسالمية/االقتصاد/اقتصادايت النفط والغاز/ اقتصادايت التكنولوجيا املالية والتحول الرقمي/ادارة االعمال",
+      "minimum_application_morning": 58,
+      "minimum_application_evening": 55,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-125",
+      "group": "literary",
+      "source_row": 6,
+      "program_source": "تقنيات احملاسبة / تقنيات /ادارة االعمال تقنيات التسويق واملبيعات االلكرتونية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-126",
+      "group": "literary",
+      "source_row": 7,
+      "program_source": ")اآلداب (اللغة فرنسية، اللغة إنكليزية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-127",
+      "group": "literary",
+      "source_row": 8,
+      "program_source": ")اآلداب (اللغة العربية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-128",
+      "group": "literary",
+      "source_row": 9,
+      "program_source": "،الرتبية اللغة العربية ،التاريخ اجلغرافية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-129",
+      "group": "literary",
+      "source_row": 10,
+      "program_source": "علم النفس/ علم النفس السريري/ علم النفس اإلكلينيكي",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-130",
+      "group": "literary",
+      "source_row": 11,
+      "program_source": "الرتبية والتنمية البشرية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-131",
+      "group": "literary",
+      "source_row": 12,
+      "program_source": "الرتبية اخلاصة",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 55,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-132",
+      "group": "literary",
+      "source_row": 13,
+      "program_source": "رايض األطفال",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-133",
+      "group": "literary",
+      "source_row": 14,
+      "program_source": "معلم الصفوف األوىل",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-134",
+      "group": "literary",
+      "source_row": 15,
+      "program_source": "التعهيل السلوكي للتوحد",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-135",
+      "group": "literary",
+      "source_row": 16,
+      "program_source": "اجلغرافية ونظم املعلومات اجلغرافية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-136",
+      "group": "literary",
+      "source_row": 17,
+      "program_source": "الرتبية الفنية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-137",
+      "group": "literary",
+      "source_row": 18,
+      "program_source": "الرتبيـــة البدنيـــة وعلـــوم الرايضـــة",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 10
+    },
+    {
+      "id": "private-138",
+      "group": "arts",
+      "source_row": 1,
+      "program_source": "العالقات العامة",
+      "minimum_application_morning": 54,
+      "minimum_application_evening": 52,
+      "evening_status": "specified",
+      "source_pdf_page": 11
+    },
+    {
+      "id": "private-139",
+      "group": "arts",
+      "source_row": 2,
+      "program_source": ")اآلداب (اللغة الفرنسية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 11
+    },
+    {
+      "id": "private-140",
+      "group": "arts",
+      "source_row": 3,
+      "program_source": "علم النفس/ علم النفس السريري/ علم النفس اإلكلينيكي",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 11
+    },
+    {
+      "id": "private-141",
+      "group": "arts",
+      "source_row": 4,
+      "program_source": "الرتبية الفنية",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 11
+    },
+    {
+      "id": "private-142",
+      "group": "arts",
+      "source_row": 5,
+      "program_source": "الرتبيـــة البدنيـــة وعلـــوم الرايضـــة",
+      "minimum_application_morning": 55,
+      "minimum_application_evening": 53,
+      "evening_status": "specified",
+      "source_pdf_page": 11
+    },
+    {
+      "id": "private-143",
+      "group": "arts",
+      "source_row": 6,
+      "program_source": "االذاعة والتلفزيون",
+      "minimum_application_morning": 54,
+      "minimum_application_evening": 52,
+      "evening_status": "specified",
+      "source_pdf_page": 11
+    }
+  ]
+}
