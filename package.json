@@ -1,0 +1,9 @@
+{
+  "name": "iraqi-university-guide",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node dev.mjs",
+    "test": "python -m unittest discover -s tests -v"
+  }
+}
