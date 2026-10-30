@@ -14,6 +14,8 @@ import specialties as sp
 ROOT=Path(__file__).parent
 PREVIEW=os.getenv('PREVIEW_MODE','false').lower()=='true'
 TOKEN=os.getenv('BOT_TOKEN','');CHANNEL=os.getenv('REQUIRED_CHANNEL','@iwillsleep');PUBLIC=(os.getenv('PUBLIC_URL') or os.getenv('RENDER_EXTERNAL_URL','')).rstrip('/')
+# Public Render URL (PUBLIC) remains the webhook/API origin. The user's site is a separate Telegram Mini App.
+WEB_APP_URL=(os.getenv('WEB_APP_URL') or 'https://pride.qabool.workers.dev/').rstrip('/')
 ADMIN_PASSWORD=os.getenv('ADMIN_PASSWORD','');SECRET=os.getenv('WEBHOOK_SECRET','')
 OPENAI_KEY=os.getenv('OPENAI_API_KEY','');VISION_MODEL=os.getenv('VISION_MODEL','')
 log=logging.getLogger('guide');member_cache={}
@@ -38,7 +40,11 @@ async def telegram(method,payload):
   async with httpx.AsyncClient(timeout=20) as client:
    res=await client.post('https://api.telegram.org/bot'+TOKEN+'/'+method,json=payload)
    data=res.json()
-  if not data.get('ok'):raise HTTPException(503,'تعذر التواصل مع تلكرام؛ حاول لاحقاً')
+  if not data.get('ok'):
+   # Telegram errors must be visible in Render runtime logs; never log tokens.
+   reason=str(data.get('description','unknown Telegram API error')).replace(TOKEN,'[redacted]') if TOKEN else str(data.get('description','unknown Telegram API error'))
+   log.error('Telegram API %s failed: %s',method,reason[:260])
+   raise HTTPException(503,'تعذر التواصل مع تلكرام؛ حاول لاحقاً')
   return data['result']
  except (httpx.HTTPError,ValueError):raise HTTPException(503,'تعذر التواصل مع تلكرام؛ حاول لاحقاً')
 
@@ -178,7 +184,7 @@ async def configure_telegram():
   'allowed_updates':['message','callback_query'],
   'drop_pending_updates':False,
  })
- await telegram('setChatMenuButton',{'menu_button':{'type':'web_app','text':'دليل الجامعات','web_app':{'url':PUBLIC}}})
+ await telegram('setChatMenuButton',{'menu_button':{'type':'commands'}})  # Do not bypass subscription via the global Mini App menu.
  await telegram('setMyCommands',{'commands':[
   {'command':'start','description':'افتح دليل الجامعات'},
   {'command':'stop','description':'أوقف التنبيهات'},
@@ -232,6 +238,30 @@ async def guard(request,call_next):
 
 @app.get('/health')
 def health():return {'status':'ok','catalog_records':len(cat.CATALOG)}
+@app.get('/api/bot-status')
+async def bot_status():
+ # Read-only. All reported diagnostics intentionally omit the token and secret.
+ result={'app':'online','bot_token_set':bool(TOKEN),'webhook_secret_set':bool(SECRET),'public_url_set':PUBLIC.startswith('https://'),'webhook_correct':False,'channel_admin':False,'pending_updates':None,'delivery_error':None}
+ if not TOKEN:return result
+ try:
+  async with httpx.AsyncClient(timeout=8) as client:
+   info=(await client.get('https://api.telegram.org/bot'+TOKEN+'/getWebhookInfo')).json()
+   me=(await client.get('https://api.telegram.org/bot'+TOKEN+'/getMe')).json()
+   if not info.get('ok') or not me.get('ok'):
+    result['telegram_api']='error';return result
+   w=info['result'];result['telegram_api']='ok'
+   result['webhook_correct']=bool(PUBLIC) and w.get('url')==PUBLIC+'/telegram/webhook'
+   result['pending_updates']=w.get('pending_update_count',0)
+   # Avoid echoing arbitrary upstream diagnostic strings onto a public endpoint.
+   if w.get('last_error_message'):
+    err=w['last_error_message'].lower()
+    result['delivery_error']='http_error' if 'http' in err or 'response' in err else ('connection_error' if 'connect' in err or 'timeout' in err else 'delivery_error')
+   bot_id=me['result']['id']
+   r=(await client.post('https://api.telegram.org/bot'+TOKEN+'/getChatMember',json={'chat_id':CHANNEL,'user_id':bot_id})).json()
+   result['channel_admin']=bool(r.get('ok') and r['result'].get('status') in ('creator','administrator'))
+ except (httpx.HTTPError,ValueError,KeyError):result['telegram_api']='unavailable'
+ return result
+
 @app.get('/api/config')
 def config():return {'specialties_count':len(sp.PROFILES),'name':'دليل الجامعات العراقية','channel':CHANNEL,'channel_url':'https://t.me/'+CHANNEL.lstrip('@'),'preview':PREVIEW,'telegram_ready':bool(TOKEN),'ocr_ready':bool(OPENAI_KEY and VISION_MODEL),'year':'2026-2027','fee_note':cat.NOTE}
 @app.post('/api/auth')
@@ -274,6 +304,20 @@ def specialty(slug:str,s=Depends(session)):
  p=sp.BY_ID.get(slug)
  if not p:raise HTTPException(404,'الاختصاص غير موجود أو لم تكتمل مراجعته')
  return {k:v for k,v in p.items() if k!='aliases'}
+
+@app.get('/api/name-search')
+def name_search(q:str='',sector:str='',shift:str='',page:int=1,s=Depends(session)):
+ if len(q)>120 or len(q.strip())<2 or page<1 or page>1000 or sector not in ['', 'government','private'] or shift not in ['', 'morning','evening']:
+  raise HTTPException(422,'اكتب اسم اختصاص من حرفين إلى 120 حرفاً واختر فلاتر صالحة')
+ terms=[cat.norm(t) for t in re.split(r'\s+',q.strip()) if cat.norm(t)];p=profile(s['user_id']);matches=[]
+ if not terms:raise HTTPException(422,'اكتب اسم الاختصاص')
+ for r in items().values():
+  if r['year']!='2026-2027' or (sector and r['sector']!=sector) or (shift and r['shift']!=shift):continue
+  name=cat.norm(r['program'])
+  if all(t in name for t in terms):matches.append(r)
+ matches.sort(key=lambda r:(cat.norm(r['program']),cat.norm(r['university']),r['shift'],r['id']))
+ size=18
+ return {'total':len(matches),'page':page,'pages':(len(matches)+size-1)//size,'items':[evaluated(r,p) for r in matches[(page-1)*size:page*size]]}
 
 @app.get('/api/search')
 def search(q:str='',sector:str='',shift:str='morning',province:str='',university:str='',category:str='',eligible:bool=False,budget:int|None=None,sort:str='closest',page:int=1,year:str='2026-2027',s=Depends(session)):
@@ -472,22 +516,53 @@ def moderate(id:int,action:str,s=Depends(admin)):
  if action not in ['approve','reject']:raise HTTPException(422)
  db.execute('UPDATE reviews SET status=? WHERE id=?',('approved' if action=='approve' else 'rejected',id));return {'ok':True}
 
-async def send_menu(uid,text='أهلاً بيك بدليل الجامعات العراقية 🎓\nاكتب معدلك أو افتح الدليل لاختيار الفرع ومقارنة الأقسام.'):
- keyboard=[[{'text':'اشترك بالقناة','url':'https://t.me/'+CHANNEL.lstrip('@')}],[{'text':'تحقق من الاشتراك','callback_data':'check'}]]
- if await membership(uid):keyboard=[[{'text':'افتح دليل الجامعات','web_app':{'url':PUBLIC}}]]
+async def send_menu(uid,text='أهلاً بيك بدليل برايد للقبولات 🎓\nلازم تكون مشترك بقناتنا حتى تفتح دليل الجامعات.'):
+ keyboard=[[{'text':'📢 اشترك بالقناة','url':'https://t.me/'+CHANNEL.lstrip('@')}],[{'text':'✅ تحقق من الاشتراك','callback_data':'check'}]]
+ try:
+  if await membership(uid):
+   # A callback lets us re-check channel membership immediately before revealing a Mini App button.
+   keyboard=[[{'text':'🎓 افتح دليل برايد','callback_data':'open'}]]
+ except HTTPException:
+  # Fail closed if Telegram cannot verify membership; never issue an app button on API errors.
+  text='هلا بيك بدليل برايد 🎓\nتعذر التحقق من القناة حالياً. تأكد أن البوت مشرف بقناة '+CHANNEL+' وحاول مجدداً.'
  await telegram('sendMessage',{'chat_id':int(uid),'text':text,'reply_markup':{'inline_keyboard':keyboard}})
+
 async def handle_update(update):
  message=update.get('message');callback=update.get('callback_query')
  if callback:
-  uid=str(callback['from']['id']);await telegram('answerCallbackQuery',{'callback_query_id':callback['id']})
-  if callback.get('data')=='check':await membership(uid,True);await send_menu(uid)
+  uid=str(callback['from']['id']);action=callback.get('data');callback_id=callback['id']
+  if action=='open':
+   try:
+    subscribed=await membership(uid,True)  # Bypass membership cache for each new launch request.
+   except HTTPException:
+    await telegram('answerCallbackQuery',{'callback_query_id':callback_id,'text':'تعذر التحقق من الاشتراك، حاول بعد قليل.','show_alert':True})
+    return
+   if not subscribed:
+    await telegram('answerCallbackQuery',{'callback_query_id':callback_id,'text':'اشترك بقناتنا أولاً، وبعدها اضغط تحقق.','show_alert':True})
+    await send_menu(uid,'الاشتراك بقناة '+CHANNEL+' إجباري حتى تفتح الدليل.')
+    return
+   await telegram('answerCallbackQuery',{'callback_query_id':callback_id})
+   # Inline Web App button opens the Cloudflare-hosted site INSIDE Telegram.
+   await telegram('sendMessage',{'chat_id':int(uid),'text':'✅ تم التحقق من اشتراكك. اضغط الزر حتى تفتح موقع برايد داخل تليگرام 👇',
+     'reply_markup':{'inline_keyboard':[[{'text':'🌐 افتح موقع برايد','web_app':{'url':WEB_APP_URL}}]]}})
+   return
+  await telegram('answerCallbackQuery',{'callback_query_id':callback_id})
+  if action=='check':
+   try:await membership(uid,True)
+   except HTTPException:pass  # send_menu reports channel problems; no bypass on errors.
+   await send_menu(uid)
   return
  if not message or message.get('chat',{}).get('type')!='private':return
  uid=str(message['from']['id']);text=message.get('text','').strip();db.user(uid);db.execute('UPDATE users SET bot_started=1 WHERE id=?',(uid,))
  if text=='/stop':db.execute('UPDATE users SET notifications=0 WHERE id=?',(uid,));await telegram('sendMessage',{'chat_id':int(uid),'text':'تم إيقاف التنبيهات. تگدر ترجع تفعلها من إعدادات الدليل.'});return
  if text=='/delete_me':db.erase(uid);await telegram('sendMessage',{'chat_id':int(uid),'text':'تم حذف ملفك وخياراتك وتجاربك وتنبيهاتك.'});return
  if text=='/privacy':await telegram('sendMessage',{'chat_id':int(uid),'text':'نحفظ معرف تلكرام، معدلك وتفضيلاتك وخياراتك المحفوظة. التنبيهات باختيارك. لا نطلب رقم امتحاني. حذف بياناتك: /delete_me'});return
- if not await membership(uid):await send_menu(uid,'اشترك بقناة '+CHANNEL+' حتى تستخدم الدليل، ثم اضغط تحقق.');return
+ try:
+  subscribed=await membership(uid)
+ except HTTPException:
+  await send_menu(uid)
+  return
+ if not subscribed:await send_menu(uid,'اشترك بقناة '+CHANNEL+' حتى تستخدم الدليل، ثم اضغط تحقق.');return
  translated=text.translate(str.maketrans('٠١٢٣٤٥٦٧٨٩٫','0123456789.'))
  if re.fullmatch(r'\d{1,3}(\.\d{1,2})?',translated) and 0<=float(translated)<=110:
   p=profile(uid);p['average']=float(translated);db.execute('UPDATE users SET profile=? WHERE id=?',(json.dumps(p,ensure_ascii=False),uid));await send_menu(uid,'حفظت معدلك '+translated+' ✅\nافتح الدليل وحدد فرعك وجنسك حتى تظهر خياراتك.');return
